@@ -40,10 +40,13 @@ disp("H(y) : ");
 disp(Hy);
 
 % Mutual Entropy H(x, y)
-Hxy = 0;
-for i=1:n
-    Hxy = Hxy + (-pxy(i) * log2(pxy(i)));
+Hxy=0 
+for i = 1:n 
+  for j = 1:n 
+    Hxy=Hxy+(-pxy(i,j) * log2(pxy(i,j)) );
+  end
 end
+
 
 disp("H(xy) : ");
 disp(Hxy);
